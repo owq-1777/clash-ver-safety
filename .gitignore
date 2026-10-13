@@ -1,0 +1,20 @@
+# Dependencies and build outputs
+node_modules/
+/target/
+/dist/
+
+# Tool caches and generated local files
+.husky/_/
+.eslintcache
+*.tsbuildinfo
+.changelog_backups/
+
+# Local credentials and environment
+.env
+.env.*
+!.env.example
+.encryption_key
+*.key
+*.pem
+*.p12
+*.pfx
