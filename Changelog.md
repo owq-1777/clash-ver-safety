@@ -3,6 +3,7 @@
 <details>
 <summary><strong> 🐞 修复问题 </strong></summary>
 
+- Fix startup errors being hidden behind the loading screen.
 - 修复系统托盘代理组行不显示延迟、超时项与未测过项无法区分的问题
 - 修复不同订阅源的同名节点测速和延迟显示指向错误节点的问题
 - 修复端口设置混淆保存值与运行值、输入无效时缺少提示的问题

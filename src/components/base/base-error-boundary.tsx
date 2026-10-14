@@ -2,6 +2,8 @@ import { ReactNode } from 'react'
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary'
 import { useTranslation } from 'react-i18next'
 
+import { hideInitialOverlay } from '@/pages/_layout/utils/initial-loading-overlay'
+
 function ErrorFallback({ error }: FallbackProps) {
   const { t } = useTranslation()
   const errorMessage = error instanceof Error ? error.message : String(error)
@@ -27,6 +29,11 @@ interface Props {
 
 export const BaseErrorBoundary = ({ children }: Props) => {
   return (
-    <ErrorBoundary FallbackComponent={ErrorFallback}>{children}</ErrorBoundary>
+    <ErrorBoundary
+      FallbackComponent={ErrorFallback}
+      onError={() => hideInitialOverlay()}
+    >
+      {children}
+    </ErrorBoundary>
   )
 }
